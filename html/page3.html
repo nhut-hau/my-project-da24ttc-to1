@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng ký</title>
+    <link rel="stylesheet" href="../css/style3.css">
+</head>
+
+<body>
+
+<form>
+
+    <h1>Form đăng ký</h1>
+
+    <!-- Thông tin cá nhân -->
+    <fieldset>
+        <legend>Thông tin cá nhân</legend>
+
+        <div class="form-row">
+            <div>
+                Họ tên:
+                <input type="text" required>
+            </div>
+
+            <div>
+                MSSV:
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div>
+                Lớp:
+                <select>
+                    <option>--Chọn lớp--</option>
+                    <option>DA24TTA</option>
+                    <option>DA24TTB</option>
+                    <option>DA24TTC</option>
+                    <option>DA24TTD</option>
+                </select>
+            </div>
+
+            <div class="gender">
+                Giới tính:
+                <input type="radio" name="gt"> Nam
+                <input type="radio" name="gt"> Nữ
+            </div>
+        </div>
+
+        Ngày sinh:
+        <input type="date" max="2026-12-31">
+
+    </fieldset>
+
+    <!-- Thông tin bổ sung -->
+    <fieldset>
+        <legend>Thông tin bổ sung</legend>
+
+        Điểm mạnh:
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Giao tiếp tốt</label>
+            <label><input type="checkbox"> Làm việc nhóm</label>
+            <label><input type="checkbox"> Tư duy logic</label>
+            <label><input type="checkbox"> Giải quyết vấn đề</label>
+            <label><input type="checkbox"> Sáng tạo</label>
+            <label><input type="checkbox"> Chịu áp lực tốt</label>
+        </div>
+
+        <div class="other">
+            <label>
+                <input type="checkbox"> Khác:
+            </label>
+            <input type="text" placeholder="Nhập điểm mạnh khác">
+        </div>
+
+        <br>
+
+        Ảnh cá nhân:
+        <input type="file" name="hinhanh">
+
+    </fieldset>
+
+    <!-- Thông tin liên hệ -->
+    <fieldset>
+        <legend>Thông tin liên hệ</legend>
+
+        <div class="form-row">
+            <div>
+                Email:
+                <input type="email">
+            </div>
+
+            <div>
+                SĐT:
+                <input type="tel">
+            </div>
+        </div>
+
+        Địa chỉ:
+        <input type="text">
+
+    </fieldset>
+
+    <div class="btn-group">
+        <input type="submit" value="Đăng ký" class="btn-submit">
+        <input type="reset" value="Nhập lại" class="btn-submit">
+    </div>
+
+</form>
+
+</body>
+</html>

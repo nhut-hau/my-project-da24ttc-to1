@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #2b5cb8, #1fa2d6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Khung form */
+form {
+    background: #e9e9eb;
+    padding: 30px;
+    width: 700px;
+    border-radius: 40px;
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Fieldset */
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+/* Chia 2 cột */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row > div {
+    flex: 1;
+}
+/* Input */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+}
+
+/* Giới tính */
+.gender input {
+    width: auto;
+    margin-left: 10px;
+}
+
+/* Checkbox đẹp */
+.checkbox-group {
+    display: block;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.checkbox-group input {
+    width: auto;
+}
+
+/* Khác + input */
+.other {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.other input[type="text"] {
+    width: 200px;
+}
+.other input[type="checkbox"] {
+    width: auto;
+}
+/* Nút */
+.btn-group {
+    display: flex;
+    justify-content: flex-end; /* đẩy qua phải */
+    gap: 10px; /* khoảng cách giữa 2 nút */
+}
+
+.btn-submit {
+    margin: 10px;
+    padding: 12px 40px;
+    background: linear-gradient(to right, #2b5cb8, #1fa2d6);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: auto;
+}
