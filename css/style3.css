@@ -3,7 +3,7 @@
 }
 body {
     font-family: Arial;
-    background: linear-gradient(to right, #2b5cb8, #1fa2d6);
+    background: linear-gradient(to right, royalblue, deepskyblue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
 
 /* Khung form */
 form {
-    background: #e9e9eb;
+    background:  lightgray ;
     padding: 30px;
     width: 700px;
     border-radius: 40px;
@@ -21,8 +21,9 @@ form {
 /* Tiêu đề */
 h1 {
     text-align: center;
-    color: #777;
+    color: gray;
     margin-bottom: 30px;
+    font-weight: 800;
 }
 
 /* Fieldset */
@@ -47,8 +48,8 @@ input, select {
     margin-top: 5px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    background: #f5f5f5;
+    border: 1px solid silver;
+    background: whitesmoke;
 }
 
 /* Giới tính */
@@ -95,7 +96,7 @@ input, select {
 .btn-submit {
     margin: 10px;
     padding: 12px 40px;
-    background: linear-gradient(to right, #2b5cb8, #1fa2d6);
+    background: linear-gradient(to right, royalblue, deepskyblue);
     color: white;
     border: none;
     border-radius: 25px;
