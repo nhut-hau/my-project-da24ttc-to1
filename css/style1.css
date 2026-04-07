@@ -1,11 +1,94 @@
-﻿<!DOCTYPE html>
-<html lang = "vi">
-    <head>
-          <title>Thiết kế web với HTML, CSS</title>
-          <meta charset ="utf-8">
-    </head>
-    <body>
-         
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-    </body>
-</html>
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    color: #34495e;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Ảnh đại diện */
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* Bảng */
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 10px auto;
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td {
+    background-color: #ecf0f1;
+}
+
+ul, ol {
+    margin-left: 30px;
+}
+
+/* Phần kinh nghiệm */
+p {
+    line-height: 1.6;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+	box-shadow: 2px 2px 8px #ccc;
+}
+.avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: auto;
+}
+.gallery {
+    display: flex;
+	justify-content: center;
+}
+
+.work-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 10px;
+}
