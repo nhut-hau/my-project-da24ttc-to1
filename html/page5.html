@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>In bảng cửu chương</title>
+</head>
+<body>
+
+<h2>In bảng cửu chương</h2>
+
+<form id="frmInBangCC">
+    <label>Nhập số:</label>
+    <input type="number" id="so" name="so" value="5">
+
+    <button type="button" id="btn">In</button>
+</form>
+
+<br>
+
+<div id="kq"></div>
+
+<script>
+const frm = document.getElementById("frmInBangCC");
+
+document.getElementById("btn").onclick = function () {
+
+    let so = frm.so.value;
+    let kq = "";
+
+    for (let i = 1; i <= 10; i++) {
+        kq += so + " x " + i + " = " + (so * i) + "<br>";
+    }
+
+    document.getElementById("kq").innerHTML = kq;
+}
+</script>
+
+</body>
+</html>
