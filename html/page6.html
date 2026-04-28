@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
+
+<script>
+    // 1. Tạo div lớn
+    const newDiv = document.createElement("div");
+    newDiv.setAttribute("class","product-item");
+
+    // 2. Tạo product-image
+    const newImage = document.createElement("div");
+    newImage.setAttribute("class","product-image");
+
+    // Tạo hình
+    const newImageNode = document.createElement("img");
+    newImageNode.setAttribute("src", "../assets/images/suonSaiGon.jpg");
+    newImage.appendChild(newImageNode);
+
+    // 3. Tạo product-info
+    const newInfo = document.createElement("div");
+    newInfo.setAttribute("class","product-info");
+
+    // Tạo name
+    const name = document.createElement("p");
+    name.textContent = "Burger Sườn Sài Gòn";
+
+    // Tạo price
+    const price = document.createElement("p");
+    price.textContent = "39.000đ";
+
+    // Tạo link chi tiết
+    const link = document.createElement("a");
+    link.setAttribute("href", "https://www.facebook.com/ilovelotteria/posts/-s%C3%A0i-g%C3%B2n-%C6%A1iiii-ai-burger-s%C6%B0%E1%BB%9Dn-honggg-tin-n%C3%B3ng-v%E1%BB%ABa-th%E1%BB%95i-v%E1%BB%ABa-%C4%83n-n%C3%A8eee-burger-s%C6%B0%E1%BB%9Dn-/1288433836647275/");
+    link.textContent = "Xem chi tiết";
+
+    // Gắn vào product-info
+    newInfo.appendChild(name);
+    newInfo.appendChild(price);
+    newInfo.appendChild(link);
+
+    // Gắn vào div lớn
+    newDiv.appendChild(newImage);
+    newDiv.appendChild(newInfo);
+
+    // Gắn ra body
+    document.body.appendChild(newDiv);
+
+</script>
+
+</body>
+</html>
