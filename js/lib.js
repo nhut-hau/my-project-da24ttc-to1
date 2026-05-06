@@ -1,15 +1,15 @@
 ﻿//Khai báo mảng đối tượng để lưu dữ liệu sản phẩm
 const productList = [
-  {id: "01", name: "Burger Sườn Sài Gòn", price: 39000, image: "../assets/images/suonsaigon.jpg", productLink: "product-detail.html"},
-  {id: "02", name: "Burger Bulgogi", price: 49000, image: "../assets/images/bulgogi.jpg", productLink: "product-detail.html"},
-  {id: "03", name: "Burger Tôm (Shrimp Burger)", price: 49000, image: "../assets/images/shrimp.jpg", productLink: "product-detail.html"},
-  {id: "04", name: "Burger Teriyaki", price: 45000, image: "../assets/images/teriyaki.jpg", productLink: "product-detail.html"},
-  {id: "05", name: "Burger Phô Mai (Cheese)", price: 47000, image: "../assets/images/cheese.jpg", productLink: "product-detail.html"},
-  {id: "06", name: "Burger L-Chicken", price: 55000, image: "../assets/images/chicken.jpg", productLink: "product-detail.html"},
-  {id: "07", name: "Burger Ramen", price: 47000, image: "../assets/images/ramen.webp", productLink: "product-detail.html"},
-  {id: "08", name: "Burger Double Double", price: 78000, image: "../assets/images/double.png", productLink: "product-detail.html"},
-  {id: "09", name: "Burger Mozzarella", price: 79000, image: "../assets/images/mozzarella.jpg", productLink: "product-detail.html"},
-  {id: "10", name: "Burger Zero Meat", price: 39000, image: "../assets/images/zero-meat.webp", productLink: "product-detail.html"}
+  {id: "01", name: "Gà Rán Truyền Thống", price: 36000, image: "../assets/images/garan.jpg", productLink: "product-detail.html"},
+  {id: "02", name: "Gà Sốt Đậu (Soy Garlic)", price: 41000, image: "../assets/images/gasotSoy.jfif", productLink: "product-detail.html"},
+  {id: "03", name: "Gà Sốt Hot&Sweet", price: 41000, image: "../assets/images/gasotHS.jfif", productLink: "product-detail.html"},
+  {id: "04", name: "Burger Teriyaki", price: 45000, image: "../assets/images/teriyaki.jfif", productLink: "product-detail.html"},
+  {id: "05", name: "Burger Gà", price: 52000, image: "../assets/images/L-Chicken.jfif", productLink: "product-detail.html"},
+  {id: "06", name: "Khoai Tây Chiên", price: 28000, image: "../assets/images/khoaitaychien.jfif", productLink: "product-detail.html"},
+  {id: "07", name: "Mực Rán", price: 28000, image: "../assets/images/mucran.jfif", productLink: "product-detail.html"},
+  {id: "08", name: "Cơm Gà Sốt Phô Mai", price: 48000, image: "../assets/images/cheeserice.jfif", productLink: "product-detail.html"},
+  {id: "09", name: "Phô mai que", price: 36000, image: "../assets/images/cheesestick.jpg", productLink: "product-detail.html"},
+  {id: "10", name: "Kem", price: 22000, image: "../assets/images/kem.jfif", productLink: "product-detail.html"}
 ];
 
 function addProduct(id, name, price, image, hyperLink)
@@ -64,4 +64,32 @@ function addProduct(id, name, price, image, hyperLink)
 
     //Gán product item vào product list
     document.getElementById("product-list").appendChild(productItem);
+}
+
+function showProduct(products)
+{
+  const container = document.getElementById('product-list');
+  container.innerHTML = "";
+
+  products.forEach(item => {
+    const productItem = document.createElement('div');
+    productItem.className = 'product-item col-md-3 col-sm-6';
+
+    productItem.innerHTML = `
+      <div class="product-image ratio ratio-1x1 overflow-hidden">
+        <img src="${item.image}" alt="${item.name}" class="img-fluid object-fit-cover h-100">
+      </div>
+      <div class="product-info p-2 text-center">
+        <p class="product-name mb-1">${item.name}</p>
+        <p class="product-price text-danger fw-bold mb-2">
+          ${item.price.toLocaleString('vi-VN')}đ
+        </p>
+        <a href="${item.productLink}" class="btn btn-sm btn-outline-primary w-100">
+          Xem chi tiết
+        </a>
+      </div>
+    `;
+
+    container.appendChild(productItem);
+  }); 
 }
