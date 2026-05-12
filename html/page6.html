@@ -10,16 +10,26 @@
     <meta charset="UTF-8">
     <script src = "../js/lib.js"></script>
 </head> 
+<style>
+    body {
+    background-color: #e7d0aa;
+}
+</style>
 <body>
     <div class = "container">
-        <div class = "product-list row row-cols-1 row-cols-4 g-4" id = "product-list">
-        </div>
+        <div class="container py-4">
+
+        <h3 class="text-center mb-4 fw-bold">Menu</h3>
+
+        <div class="row row-cols-2 row-cols-md-4 g-3" id="product-list"></div>
+
+</div>
     </div>
     <script>
-        productList.forEach(function(item) {
+       /* productList.forEach(function(item) {
         // Truyền từng thuộc tính vào hàm
         addProduct(item.id, item.name, item.price, item.image, item.productLink);
-        });
+        });*/
         
         showProduct(productList);
     </script>
